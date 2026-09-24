@@ -417,7 +417,7 @@ async function getRouteInternal(
   }/${startLng},${startLat};${endLng},${endLat}?overview=full&geometries=polyline&steps=true`;
 
   try {
-    const osrmData = await safeFetchJson(osrmUrl, undefined, 4000);
+    const osrmData = await safeFetchJson(osrmUrl, undefined, 1200);
     if (osrmData && osrmData.routes && osrmData.routes.length > 0) {
       const route = osrmData.routes[0];
       let speedAdjustment = 1.0;
